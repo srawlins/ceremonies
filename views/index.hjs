@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <p>Welcome to {{ title }}, an attempt to remove all of the horrible ceremony from the Stage Checkout.</p>
+
+    <p>Choose a ceremony you'd like to avoid:</p>
+    <select name="ceremony" id="ceremony">
+      {{#available_ceremonies}}
+      <option value="{{code}}">
+        {{ summary }}
+        <span class="ceremony-detail">{{ detail }}</span>
+      </option>
+      {{/available_ceremonies}}
+    </select>
+  </body>
+</html>
